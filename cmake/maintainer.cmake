@@ -14,7 +14,7 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
 
 # Common warning flags for GCC, G++, Clang and Clang++
-SET(MY_WARNING_FLAGS "-Wall -Wextra -Wformat-security")
+SET(MY_WARNING_FLAGS "-Wall -Wextra -Wformat-security -Wno-implicit-fallthrough -Wno-cast-function-type -Wno-format-overflow -Wno-unused-variable -Wno-unused-but-set-variable -Wno-format-truncation -Wno-nonnull -Wno-shift-negative-value -Wno-maybe-uninitialized -Wno-int-in-bool-context -Wno-parentheses -Wno-return-type -Wno-misleading-indentation")
 
 # Common warning flags for GCC and Clang
 SET(MY_C_WARNING_FLAGS
@@ -22,7 +22,7 @@ SET(MY_C_WARNING_FLAGS
 
 # Common warning flags for G++ and Clang++
 SET(MY_CXX_WARNING_FLAGS
-    "${MY_WARNING_FLAGS} -Woverloaded-virtual -Wno-unused-parameter")
+    "${MY_WARNING_FLAGS} -Woverloaded-virtual -Wno-unused-parameter -Wno-class-memaccess -Wno-reorder -Wno-catch-value -Wno-aligned-new -Wno-ignored-qualifiers -Wno-missing-field-initializers")
 
 # Extra warning flags for Clang/Clang++
 # unused-command-line-argument:
